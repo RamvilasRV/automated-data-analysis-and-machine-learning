@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <div class="card m-4 p-4">
+
+      <h1 style="padding-bottom:30px;">Enter the new values to predict the target value</h1>
+    <form class="" action="/prediction2" method="post">
+      {% for col in col_names  %}
+      <div class="form-group">
+      <label for="{{ col }}">{{ col }}:</label>
+        <input class="form-control" type="text" name="{{ col }}" required placeholder="{{ col }}"><br><br>
+      </div>
+      {% endfor %}
+      <button class="btn btn-primary p-3 rounded-4" type="submit">Get prediction results</button>
+    </form>
+  </div>
+
+{% if pred_sent==True %}
+<div class="card m-4 p-4">
+<h2>Results:</h2>
+      <table class="table">
+        <thead>
+         <tr>
+          {% for i in final_prediction_headers %}
+          <th>{{ i }}</th>
+          {% endfor %}
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+           {% for j in final_prediction_values %}
+           <td>{{ j }}</td>
+           {% endfor %}
+         </tr>
+         <tbody>
+       <tables>
+    </div>
+</div>
+{% endif %}
+
+    </body>
+</html>

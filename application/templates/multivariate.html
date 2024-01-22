@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+      <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+      <h1 class="p-4">Multivariate Analysis</h1>
+
+    <div class="card p-4 m-4">
+      <h3>Correlation  heatmap</h3>
+    <div id="corr_graph">
+      <script>
+        var graph = {{ corr_figJSON | safe }};
+        Plotly.plot("corr_graph", graph, {});
+      </script>
+    </div>
+    </div>
+
+    <div class="card p-4 m-4">
+      <h3>Covariance  heatmap</h3>
+    <div id="cov_graph">
+      <script>
+        var graph = {{ cov_figJSON | safe }};
+        Plotly.plot("cov_graph", graph, {});
+      </script>
+    </div>
+    </div>
+
+
+<div class="card m-4 p-4">
+<h3>Multivariate Graphs</h3>
+<form action="/multivariate" id="graphForm" method="post">
+  <div class="form-group">
+    <label for="column1">X axis value</label>
+    <select class="form-control" name="column1" id="column1">
+      {% for col in col_names %}
+      <option value="{{ col }}">{{ col }}</option>
+      {% endfor %}
+    </select>
+    <br>
+  </div>
+
+  <div class="form-group">
+    <label for="column2">Y axis value</label>
+    <select class="form-control" name="column2" id="column2">
+      {% for col in col_names %}
+      <option value="{{ col }}">{{ col }}</option>
+      {% endfor %}
+    </select>
+    <br>
+  </div>
+
+  <div class="form-group">
+    <label for="graphType">Graph Type:</label>
+    <select class="form-control" name="graphType" id="graphType">
+      {% for type in graph_types %}
+      <option value="{{ type }}">{{ type }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <button class="btn btn-primary m-3 p-2 mb-4 rounded-3" type="submit">Generate Graph</button>
+</form>
+
+  <h5>Graph for {{ column1 }} v/s {{ column2 }}</h5>
+<div id="graphContainer">
+  <script>
+    var graph = {{ figJSON | safe }};
+    Plotly.plot("graphContainer", graph, {});
+  </script>
+</div>
+</div>
+
+
+<h4>{{ msg }}</h4>
+
+<form action="/model_recommendation" method="post">
+    <button class="btn btn-primary rounded-4" type="submit" style="margin-left:22px;margin-top:10px;padding:10px;padding-left:20px;padding-right:20px;">Get best model</button><br>
+    <small class="form-text text-muted" style="margin-left:24px;padding-bottom:20px;">This may take a while</small>
+</form>
+</body>
+  </body>
+</html>

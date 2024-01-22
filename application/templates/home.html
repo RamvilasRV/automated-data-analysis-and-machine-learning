@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Automated Recommendation System</title>
+</head>
+<body>
+   <div class="page_1">
+    <div class="container">
+    <h1>Auto Machine Learning</h1>
+    <blockquote>Automate your data analysis and get recommended</blockquote>
+    <blockquote>with the training algorithms that suit your data...</blockquote>
+    <div class="images">
+        <div class="img_border">
+        <div class="img-h"><img src="static/upload final svg.svg" alt=""><h3>Upload<br>data</h3></div></div>
+        <div class="img_border"><div class="img-h"><img src="static/graphs final svg.svg" alt=""><h3>Get<br>Insights</h3></div></div>
+        <div class="img_border"><div class="img-h"><img src="static/model final svg.svg" alt=""><h3>Get<br>Model</h3></div></div>
+    </div>
+    <!-- add form here -->
+    <form action="/select_target"  method="POST" enctype="multipart/form-data">
+      <input class="Upload_btn" type="file" name="file" accept=".csv">
+      <input class="submit_btn" type="submit" value="Upload">
+    </form>
+    </div> <!-- add closing </div> tag here -->
+   </div>
+</body>
+</html>
