@@ -13,7 +13,7 @@ Gain insights into the structure of your data.<br>
 ### Graph Generation:
 Generate univariate graphs to understand the distribution of individual variables.<br>
 Create multivariate graphs to explore relationships between different variables.<br>
-Generate heatmaps for an overall understanding of the data.<br>
+Generate heat maps for an overall understanding of the data.<br>
 
 ### Interactive Graphs:
 Enjoy interactive graphs that enhance your data exploration experience.<br>
@@ -24,7 +24,7 @@ Scatter plots<br>
 Bar graphs<br>
 Line graphs<br>
 
-Here are some screenshots --
+### Screenshots --
 ![image](https://github.com/RamvilasRV/automated-data-analysis-and-machine-learning/assets/72241424/174b2810-b20d-4441-873f-d0b2638f6655)
 
 ![image](https://github.com/RamvilasRV/automated-data-analysis-and-machine-learning/assets/72241424/f5031888-71c5-4e3d-b080-7e60a17265cf)
