@@ -1,7 +1,28 @@
-# Automated-data-analysis-and-machine-learning
-Upload your dataset and generate exploratory data analysis reports in just few minutes..
+## Auto Data analysis
+A Flask web application that allows users to upload any dataset and generates an exploratory data analysis report. This report includes structural analysis of the dataset such as missing data, empty data, and the generation of univariate and multivariate graphs. The interactive graphs include scatter plots, bar graphs, and line graphs. Users can select any two attributes and dynamically generate graphs based on their choices.
 
-This flask app lets you upload your dataset and gives you insights about your data. Generate pretty and interactive graphs.
+## Features
+
+### Upload Any Dataset: 
+Easily upload your dataset in various formats, including CSV, Excel, and more.
+
+### Structural Analysis:
+Identify missing and empty data in your dataset.<br>
+Gain insights into the structure of your data.
+
+### Graph Generation:
+Generate univariate graphs to understand the distribution of individual variables.
+Create multivariate graphs to explore relationships between different variables.
+Generate heatmaps for an overall understanding of the data
+
+### Interactive Graphs:
+Enjoy interactive graphs that enhance your data exploration experience.
+Select attributes to dynamically generate graphs based on your preferences.
+
+### Supported Graph Types:
+Scatter plots
+Bar graphs
+Line graphs
 
 Here are some screenshots --
 ![image](https://github.com/RamvilasRV/automated-data-analysis-and-machine-learning/assets/72241424/174b2810-b20d-4441-873f-d0b2638f6655)
