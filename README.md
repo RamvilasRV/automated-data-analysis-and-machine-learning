@@ -8,21 +8,21 @@ Easily upload your dataset in various formats, including CSV, Excel, and more.
 
 ### Structural Analysis:
 Identify missing and empty data in your dataset.<br>
-Gain insights into the structure of your data.
+Gain insights into the structure of your data.<br>
 
 ### Graph Generation:
-Generate univariate graphs to understand the distribution of individual variables.
-Create multivariate graphs to explore relationships between different variables.
-Generate heatmaps for an overall understanding of the data
+Generate univariate graphs to understand the distribution of individual variables.<br>
+Create multivariate graphs to explore relationships between different variables.<br>
+Generate heatmaps for an overall understanding of the data.<br>
 
 ### Interactive Graphs:
-Enjoy interactive graphs that enhance your data exploration experience.
-Select attributes to dynamically generate graphs based on your preferences.
+Enjoy interactive graphs that enhance your data exploration experience.<br>
+Select attributes to dynamically generate graphs based on your preferences.<br>
 
 ### Supported Graph Types:
-Scatter plots
-Bar graphs
-Line graphs
+Scatter plots<br>
+Bar graphs<br>
+Line graphs<br>
 
 Here are some screenshots --
 ![image](https://github.com/RamvilasRV/automated-data-analysis-and-machine-learning/assets/72241424/174b2810-b20d-4441-873f-d0b2638f6655)
